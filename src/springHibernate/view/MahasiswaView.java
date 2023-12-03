@@ -40,14 +40,12 @@ public class MahasiswaView extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         npm = new javax.swing.JTextField();
         nama = new javax.swing.JTextField();
         kelas = new javax.swing.JTextField();
         tugas = new javax.swing.JTextField();
         uts = new javax.swing.JTextField();
         uas = new javax.swing.JTextField();
-        total = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabel = new javax.swing.JTable();
         simpan = new javax.swing.JButton();
@@ -70,8 +68,6 @@ public class MahasiswaView extends javax.swing.JFrame {
         jLabel6.setText("Nilai UTS");
 
         jLabel7.setText("Nilai UAS");
-
-        jLabel8.setText("Nilai Akhir");
 
         npm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,8 +104,6 @@ public class MahasiswaView extends javax.swing.JFrame {
                 uasActionPerformed(evt);
             }
         });
-
-        total.setText("Kosongkan");
 
         tabel.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -159,33 +153,32 @@ public class MahasiswaView extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addComponent(jLabel3)
                             .addComponent(jLabel4)
                             .addComponent(jLabel5)
                             .addComponent(jLabel6)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8))
+                            .addComponent(jLabel7))
                         .addGap(27, 27, 27)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(npm)
-                            .addComponent(total, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                            .addComponent(npm, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
                             .addComponent(uas)
                             .addComponent(uts)
                             .addComponent(tugas)
                             .addComponent(kelas)
                             .addComponent(nama)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(74, 74, 74)
                         .addComponent(simpan)
                         .addGap(18, 18, 18)
                         .addComponent(update)
                         .addGap(18, 18, 18)
                         .addComponent(hapus)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 189, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(80, 80, 80))
         );
@@ -220,17 +213,13 @@ public class MahasiswaView extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
                             .addComponent(uas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
-                            .addComponent(total, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                        .addGap(22, 22, 22)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(simpan)
                             .addComponent(update)
                             .addComponent(hapus)))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
@@ -303,9 +292,7 @@ public class MahasiswaView extends javax.swing.JFrame {
     public JTextField getUAS(){
         return uas;
     }
-    public JTextField getTotal(){
-        return total;
-    }
+    
     /**
      * @param args the command line arguments
      */
@@ -350,14 +337,12 @@ public class MahasiswaView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField kelas;
     private javax.swing.JTextField nama;
     private javax.swing.JTextField npm;
     private javax.swing.JButton simpan;
     private javax.swing.JTable tabel;
-    private javax.swing.JTextField total;
     private javax.swing.JTextField tugas;
     private javax.swing.JTextField uas;
     private javax.swing.JButton update;

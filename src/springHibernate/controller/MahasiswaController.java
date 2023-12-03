@@ -30,7 +30,6 @@ public class MahasiswaController {
         this.mahasiswaView.getTugas().setText(String.valueOf(this.mahasiswaView.getTable().getValueAt(index, 3)));
         this.mahasiswaView.getUTS().setText(String.valueOf(this.mahasiswaView.getTable().getValueAt(index, 4)));
         this.mahasiswaView.getUAS().setText(String.valueOf(this.mahasiswaView.getTable().getValueAt(index, 5)));
-        this.mahasiswaView.getTotal().setText(String.valueOf(this.mahasiswaView.getTable().getValueAt(index, 6)));
     }
 
     public void clear(){
@@ -40,7 +39,6 @@ public class MahasiswaController {
         this.mahasiswaView.getTugas().setText("");
         this.mahasiswaView.getUTS().setText("");
         this.mahasiswaView.getUAS().setText("");
-        this.mahasiswaView.getTotal().setText("");
     }
 
     public void saveMahasiswa(){
@@ -51,7 +49,6 @@ public class MahasiswaController {
         mahasiswa.setTugas(this.mahasiswaView.getTugas().getText());
         mahasiswa.setUTS(this.mahasiswaView.getUTS().getText());
         mahasiswa.setUAS(this.mahasiswaView.getUAS().getText());
-        mahasiswa.setTotal(this.mahasiswaView.getTotal().getText());
         App.getMahasiswaService().save(mahasiswa);
         JOptionPane.showMessageDialog(null, "Data Berhasil di Simpan", "Info", JOptionPane.INFORMATION_MESSAGE);
         clear();
@@ -66,8 +63,7 @@ public class MahasiswaController {
         mahasiswa.setTugas(this.mahasiswaView.getTugas().getText());
         mahasiswa.setUTS(this.mahasiswaView.getUTS().getText());
         mahasiswa.setUAS(this.mahasiswaView.getUAS().getText());
-        mahasiswa.setTotal(this.mahasiswaView.getTotal().getText());
-        App.getMahasiswaService().save(mahasiswa);
+        App.getMahasiswaService().update(mahasiswa);
         JOptionPane.showMessageDialog(null, "Data Berhasil di Update", "Info",JOptionPane.INFORMATION_MESSAGE);
         clear();
         tampilData();

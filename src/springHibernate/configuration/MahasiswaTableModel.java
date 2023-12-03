@@ -10,7 +10,7 @@ import springHibernate.model.Mahasiswa;
  */
 public class MahasiswaTableModel extends AbstractTableModel {
     private List<Mahasiswa> mahasiswas = new ArrayList<>();
-    private final String[] HEADER = {"NPM", "Nama", "Kelas", "Tugas", "UTS", "UAS", "Total"};
+    private final String[] HEADER = {"NPM", "Nama", "Kelas", "Tugas", "UTS", "UAS"};
 
     public MahasiswaTableModel(List<Mahasiswa> mahasiswas){
         this.mahasiswas = mahasiswas;
@@ -48,8 +48,6 @@ public class MahasiswaTableModel extends AbstractTableModel {
                 return mahasiswa.getUTS();
             case 5:
                 return mahasiswa.getUAS();
-            case 6:
-                return mahasiswa.getTotal();  // Assuming a method to calculate total in Mahasiswa class
             default:
                 return null;
         }

@@ -35,9 +35,6 @@ public class Mahasiswa implements Serializable {
      @Column(name = "UAS", length = 3)
     private String uas;
 
-     @Column(name = "Total", length = 3)
-    private String total;
-
 
     public String getNpm() { return npm;}
     public void setNpm(String npm) { this.npm = npm;}
@@ -56,8 +53,5 @@ public class Mahasiswa implements Serializable {
     
     public String getUAS() { return uas;}
     public void setUAS(String uas) { this.uas = uas;}
-
-    public String getTotal() { return total;}
-    public void setTotal(String total) { this.tugas = total;}
 
 }
